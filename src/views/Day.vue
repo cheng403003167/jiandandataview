@@ -23,13 +23,13 @@ export default {
     return {
       config:{
         title: {
-            text: ''
+            text: '',
         },
         tooltip:{
           show: true,
         },
         xAxis: {
-            data: []
+            data: [],
         },
         yAxis: {},
         series: [{
