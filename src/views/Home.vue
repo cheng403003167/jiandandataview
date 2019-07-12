@@ -44,7 +44,7 @@ export default {
       }
       var myChart = echarts.init(document.getElementById('main'));
       this.axios({
-        url: 'http://localhost:3000/month/'+month,
+        url: 'http://ch.dnitu.top/jiandanimgAPI/month/'+month,
         method: 'get',
       }).then((data)=>{
         if(data.data.originData.length>0){
