@@ -62,7 +62,7 @@
       getUserData(){
         let that = this;
         this.axios({
-          url: 'http://localhost:3000/jiandanimgAPI/userChart',
+          url: 'http://ch.dnitu.top/jiandanimgAPI/userChart',
           method: 'get',
         }).then((data)=>{
           if(data.data.length>0){
@@ -73,7 +73,7 @@
       userInfo(datas,index){
         let that = this;
         this.axios({
-          url: 'http://localhost:3000/jiandanimgAPI/userInfo/'+datas.userId,
+          url: 'http://ch.dnitu.top/jiandanimgAPI/userInfo/'+datas.userId,
           method: 'get',
         }).then((data)=>{
           if(data.data.length>0){

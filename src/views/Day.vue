@@ -104,7 +104,7 @@ export default {
         }
       }
       this.axios({
-        url: 'http://localhost:3000/jiandanimgAPI/day/'+this.year+'/'+this.dubbleString(month)+'/'+this.dubbleString(day),
+        url: 'http://ch.dnitu.top/jiandanimgAPI/day/'+this.year+'/'+this.dubbleString(month)+'/'+this.dubbleString(day),
         method: 'get',
       }).then((data)=>{
         if(data.data.originData.length>0){
