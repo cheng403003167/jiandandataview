@@ -10,9 +10,9 @@
       <el-button @click="getDayData(month,day,'add')">后一天</el-button>
     </el-row>
     <el-row type="flex" justify="space-between" class="btn-con2">
-      <el-button autofocus @click="changeImgData()">图片数据</el-button>
-      <el-button @click="changeImgHour()">每小时数据</el-button>
-      <el-button @click="changeUserData()">用户数据</el-button>
+      <el-button :class="imgData == 1?'active':''" @click="changeImgData()">图片数据</el-button>
+      <el-button :class="imgData == 2?'active':''" @click="changeImgHour()">每小时数据</el-button>
+      <el-button :class="imgData == 3?'active':''" @click="changeUserData()">用户数据</el-button>
     </el-row>
   </div>
 </template>
@@ -104,7 +104,7 @@ export default {
         }
       }
       this.axios({
-        url: 'http://ch.dnitu.top/jiandanimgAPI/day/'+this.year+'/'+this.dubbleString(month)+'/'+this.dubbleString(day),
+        url: 'http://localhost:3000/jiandanimgAPI/day/'+this.year+'/'+this.dubbleString(month)+'/'+this.dubbleString(day),
         method: 'get',
       }).then((data)=>{
         if(data.data.originData.length>0){
@@ -329,5 +329,10 @@ export default {
   .btn-con2{
     width: 900px;
     margin: 20px auto;
+  }
+  .btn-con2 .active{
+    color: #409EFF;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
   }
 </style>

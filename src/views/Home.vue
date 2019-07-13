@@ -44,7 +44,7 @@ export default {
       }
       var myChart = echarts.init(document.getElementById('main'));
       this.axios({
-        url: 'http://ch.dnitu.top/jiandanimgAPI/month/'+new Date().getFullYear()+'/'+month,
+        url: 'http://localhost:3000/jiandanimgAPI/month/'+new Date().getFullYear()+'/'+month,
         method: 'get',
       }).then((data)=>{
         if(data.data.originData.length>0){
@@ -80,6 +80,7 @@ export default {
 </script>
 <style>
   .home{
+    position: relative;
     text-align: center;
   }
   #main{
